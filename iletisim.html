@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        var img = ["agac.jpg", "kedi.jpg", "kucuk_agac.jpg"];
+        function ChangeIt(id){
+            $('.text').fadeTo('slow', 0.5);
+            $('.img1').fadeTo('slow', 0, function(){
+                $('.img1').css('background-image','url("assets/img/'+img[id]+'")');
+            }).fadeTo('slow', 1);
+            $('.text').fadeTo('slow', 1);
+        }
+        
+        $(document).ready(function(){
+            $('.alert').hide();
+            $('.bg-img').hide(); 
+            $('.menubar-close').hide();
+        });
+        
+        function Submit(){
+            $('.alert').fadeIn('show');
+        }
+        
+        function Close(){
+            $('.alert').fadeOut('show');
+        }
+        
+        $(window).on('scroll', function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+                $('nav a').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+                $('nav a').removeClass('black');
+            }
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <nav>
+       <div class="logo">Mozan Yazılım</div>
+       <ul>
+                <ul>
+           <li><a href="index.html">ANASAYFA</a></li>
+           <li><a href="calismalarimiz.html">ÇALIŞMALARIMIZ</a>
+           <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+           <li><a href="iletisim.html">SEN KİMSİN?</a></li>
+       </ul>
+       </ul>
+    </nav>
+    <div class="menubar">  
+       <button onmousedown="$('.bg-img').fadeIn('show'); $('.menubar button').hide(); $('.menubar-close').fadeIn('show');"><h2>Arkaplanı<br>Değiştir</h2></button>
+       <button class="menubar-close" onmousedown="$('.bg-img').hide(); $('.menubar button').fadeIn('show'); $('.menubar-close').hide();"><h2>Kapat</h2></button>
+       <ul class="bg-img">
+           <li onclick="ChangeIt(0);"><img src="assets/img/agac.jpg"></li>
+           <li onclick="ChangeIt(1);"><img src="assets/img/kedi.jpg"></li>
+           <li onclick="ChangeIt(2);"><img src="assets/img/kucuk_agac.jpg"></li>
+       </ul>
+    </div>
+    <div class="alert" onmouseover="$('.alert').css('background-color','#BDBDBD');" onmouseout="$('.alert').css('background-color','#FAFAFA');">
+        <button class="close" onclick="Close();">X</button>
+        <h3>İşlem Başarılı</h3>
+        <p>Görüşünüz başarılı bir şekilde alınmıştır.</p>
+    </div>
+    <div class="center" style="top: 20%">
+        <div class="center-inner" style="width: 40%">
+            <div class="form-iletisim" style="margin: 10px">
+                <p style="margin: 30px; text-transform: uppercase; color: #212121">Sen Kimsin?.</p>
+                <form>
+                    <input class="inp" type="text" placeholder="Adınız..."><br>
+                    <input class="inp" type="text" placeholder="Soyadınız..."><br>
+                    <input class="inp" type="email" placeholder="Mail Adresiniz..."><br>
+                    <input class="inp" type="tel" placeholder="Telefon Numaranız..."><br>
+                    <textarea class="inp" placeholder="Sen Kimsin???" style="height: 200px"></textarea><br>
+                    <input class="inp-btn" value="Gönder" onclick="Submit();">
+                    <hr>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="img1"></div>
+</body>
+</html>

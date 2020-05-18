@@ -1,0 +1,365 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #212121;
+    background-color: #444444;
+}
+
+.img1, .img2 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.img1 {
+    background-image: url('assets/arkaplan3.jpg');
+    min-height: 100%;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 10px #212121;
+    filter: brightness(0.5);
+}
+
+.img1 video {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.img2 {
+    min-height: 30%;
+    box-shadow: 0px 0px 10px #212121;
+    background-color: #212121;
+}
+
+.img2 video {
+    height: 600px;
+    width: 100%;
+    padding: 10px 0px 1px 0px;
+    border-radius: 90px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+    box-shadow: 0px 0px 10px #212121;
+}
+
+.section p{
+    font-size: 1.75em;
+    line-height: 1.3;
+    color: white;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 3px;
+    z-index: 1;
+    
+}
+
+.kimsin a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.kimsin a:hover{
+    font-size: 35px;
+}
+
+
+.text .border {
+    background-color: #FAFAFA;
+    color: #212121;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 120%
+}
+
+.text .border:hover {
+    font-size: 150%;
+    box-shadow: 0px 0px 25px #212121;
+}
+
+.text p {
+    font-weight: bold;
+}
+
+nav {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .3s;
+    color: white;
+}
+
+nav.black {
+    background: #FAFAFA;
+    box-shadow: 0px 0px 10px #212121;
+    color: #212121;
+}
+
+nav .logo{
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    transition: .3s;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a {
+    line-height: 80px;
+    color: #151515;
+    padding: 12px 30px;
+    text-decoration: none;
+    transition: .3s;
+    color: white;
+}
+
+nav ul li a.black {
+    color: #212121;
+}
+
+nav ul li a:hover {
+    font-size: 150%;
+}
+
+.text button {
+    background-color: #FAFAFA;
+    margin-top: 10px;
+    padding: 7px 30px;
+    border: 2px solid #212121;
+    border-radius: 5px;
+    transition: .3s;
+    box-shadow: 0px 0px 30px #212121;
+}
+
+.border {
+    transition: .3s;
+    box-shadow: 0px 0px 50px #212121;
+}
+
+.text button:hover {
+    border: 2px solid #FAFAFA;
+    transition: .3s;
+    box-shadow: 0px 0px 30px #FAFAFA;
+}
+
+.hakkimizda img {
+    width: 150px;
+    border-radius: 999px;
+    margin: 20px;
+    box-shadow: 0 0 20px #212121;
+}
+
+.hakkimizda thead h1 {
+    font-weight: normal;
+    text-align: center;
+    padding: 10px;
+}
+
+.hakkimizda .basliklar td{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #E0E0E0;
+}
+
+.hakkimizda tfoot {
+    text-align: center;
+}
+
+.hakkimizda tfoot td {
+    padding: 10px;
+    background-color: #E0E0E0;
+}
+
+.hakkimizda tbody {
+    text-align: center;
+    font-size: 14pt;
+}
+
+.hakkimizda {
+    border-spacing: 0;
+    color: #212121;
+    font-size: 60%;
+}
+
+.center {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+.center-inner {
+    margin: auto;
+    width: 50%;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 30px #212121;
+}
+
+.inp {
+    font-size: 60%;;
+    margin: 5px 0;
+    width: 85%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #212121;
+    transition: .3s;
+    box-shadow: 0px 0px 1px #212121;
+}
+
+.inp:hover {
+    border: 1px solid #90CAF9;
+    transition: .3s;
+    box-shadow: 0px 0px 2px #90CAF9;
+}
+
+.inp:focus {
+    border: 1px solid #2196F3;
+    transition: .3s;
+    box-shadow: 0px 0px 3px #2196F3;
+}
+
+.inp-btn {
+    text-align: center;
+    font-size: 60%;;
+    margin: 5px 0;
+    width: 85%;
+    padding: 5px 10px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    background-color: #212121;
+    color: #FAFAFA;
+}
+
+.menubar {
+    border-radius: 0px 10px 10px 0px;
+    background-color: #FAFAFA;
+    position: fixed;
+    z-index: 99;
+    top: 15%;
+    opacity: 0.7;
+    transition: .3s;
+    box-shadow: 0px 0px 10px #212121;
+}
+
+.menubar:hover {
+    opacity: 1;
+    transition: .3s;
+}
+
+.menubar h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    text-align: center;
+}
+.menubar button {
+    border: none;
+    margin: 10px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+.bg-img {
+    list-style-type: none;
+    padding: 0px 20px;
+    margin: 10px;
+}
+
+.menubar li img {
+    width: 200px;
+    border-radius: 10px;
+    transition: .3s;
+    box-shadow: 0px 0px 5px;
+}
+
+.menubar-close {
+    width: 92%;
+    text-align: center;
+}
+
+.menubar li img:hover {
+    width: 220px;
+    transition: .3s;
+}
+
+.alert h1 p {
+    margin: 0;
+    padding: 0;
+}
+
+.alert {
+    border-radius: 10px;
+    opacity: 0.9;
+    top: 10%;
+    left: 84%;
+    background: #FAFAFA;
+    position: absolute;
+    z-index: 99;
+    padding: 0px 15px;
+    margin: 0px 5px;
+    transition: .3s;
+}
+
+.close {
+    margin: 20px 5px;
+    float: right;
+    border: 1px solid;
+    background-color: #FAFAFA;
+}
+
+.social img{
+    width: 10%;
+    border-radius: 99px;
+    border: 1px solid #212121;
+    margin: 5px 5px 0px 5px;
+    transition: .3s;
+}
+
+.social img:hover {
+    box-shadow: 0px 0px 10px #212121;
+    transition: .3s;
+}
+
+@media only screen and (max-width: 950px) {
+    nav ul {
+        display: none;
+    }
+    
+    .menubar {
+        display: none;
+    }
+}

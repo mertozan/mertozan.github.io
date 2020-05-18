@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anasayfa</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.bg-img').hide(); 
+            $('.menubar-close').hide();
+        });
+        $(window).on('scroll', function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+                $('nav a').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+                $('nav a').removeClass('black');
+            }
+        });
+        var img = ["arkaplan1.jpeg", "arkaplan2.jpeg", "arkaplan3.jpg"];
+        function ChangeIt(id){
+            $('.text').fadeTo('slow', 0.5);
+            $('.img1').fadeTo('slow', 0, function(){
+                $('.img1').css('background-image','url("assets/img/'+img[id]+'")');
+            }).fadeTo('slow', 1);
+            $('.text').fadeTo('slow', 1);
+        }
+    </script>
+</head>
+<body>
+    <nav>
+       <div class="logo" style="color: white">Mozan Yazılım</div>
+            <ul>
+           <li><a  href="index.html">ANASAYFA</a></li>
+           <li><a href="calismalarimiz.html">ÇALIŞMALARIMIZ</a>
+           <li><a href="hakkimizda.html">HAKKIMIZDA</a></li>
+           <li><a href="iletisim.html">SEN KİMSİN?</a></li>
+       </ul>
+    </nav>
+    <div class="menubar">  
+       <button onmousedown="$('.bg-img').fadeIn('show'); $('.menubar button').hide(); $('.menubar-close').fadeIn('show');"><h2>Arkaplanı<br>Değiştir</h2></button>
+       <button class="menubar-close" onmousedown="$('.bg-img').hide(); $('.menubar button').fadeIn('show'); $('.menubar-close').hide();"><h2>Kapat</h2></button>
+       <ul class="bg-img">
+           <li onclick="ChangeIt(0);"><img src="assets/img/arkaplan1.jpeg"></li>
+           <li onclick="ChangeIt(1);"><img src="assets/img/arkaplan2.jpeg"></li>
+           <li onclick="ChangeIt(2);"><img src="assets/img/arkaplan3.jpg"></li>
+       </ul>
+    </div>
+    <div class="text">
+        <span class="border">
+            Sen Kimsin?
+        </span>
+        <p><br></p>
+        <p>Biz 2 yıldır yazılım sektöründe hizmet veren bir firmayız.Genç ve dinamik ekibimizle güzel ürünler çıkarmaya gayret ediyoruz.Birlikte ülkemizi ve kendimiz geliştirmek için her gün çok sıkı çalışıyoruz.Sen de bu ekibin bir parçası olmak istiyorsan sana bir sorumuz var.</p>
+        <p>Peki SEN <span class="kimsin"><a href="iletisim.html">KİMSİN?</a></span> </p>
+        
+    </div>
+    <div class="img1"></div>
+</body>
+</html>
