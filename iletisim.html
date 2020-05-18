@@ -6,7 +6,7 @@
     <script src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript">
-        var img = ["agac.jpg", "kedi.jpg", "kucuk_agac.jpg"];
+        var img = ["arkaplan1.jpeg", "arkaplan2.jpeg", "arkaplan3.jpeg"];
         function ChangeIt(id){
             $('.text').fadeTo('slow', 0.5);
             $('.img1').fadeTo('slow', 0, function(){
@@ -59,9 +59,9 @@
        <button onmousedown="$('.bg-img').fadeIn('show'); $('.menubar button').hide(); $('.menubar-close').fadeIn('show');"><h2>Arkaplanı<br>Değiştir</h2></button>
        <button class="menubar-close" onmousedown="$('.bg-img').hide(); $('.menubar button').fadeIn('show'); $('.menubar-close').hide();"><h2>Kapat</h2></button>
        <ul class="bg-img">
-           <li onclick="ChangeIt(0);"><img src="assets/img/agac.jpg"></li>
-           <li onclick="ChangeIt(1);"><img src="assets/img/kedi.jpg"></li>
-           <li onclick="ChangeIt(2);"><img src="assets/img/kucuk_agac.jpg"></li>
+           <li onclick="ChangeIt(0);"><img src="assets/img/arkaplan1.jpeg"></li>
+           <li onclick="ChangeIt(1);"><img src="assets/img/arkaplan2.jpeg"></li>
+           <li onclick="ChangeIt(2);"><img src="assets/img/arkaplan3.jpeg"></li>
        </ul>
     </div>
     <div class="alert" onmouseover="$('.alert').css('background-color','#BDBDBD');" onmouseout="$('.alert').css('background-color','#FAFAFA');">
